@@ -18,10 +18,10 @@ out_csvs 폴더: 3개의 ipynb로부터 예측값, bert_time을 이용한 CI_HOU
 saved_model: README 파일을 작성해놓았는데 저희가 미리 학습시켜놓은 autogluon 모델을 다운받을 수 있는 주소를 적어두었습니다. 용량이 너무 큰 관계로 받을 수 있는 링크를 포함함을 알려드립니다.
 3개의 ipynb파일: 최종파일을 도출하기 위한 3개의 노트북 파일입니다.  
 
-- model_load_infer.ipynb : private score 복원을 위한 모델 로드와 predict과정 노트북 파일입니다.
-- train_auto6.ipynb: autogluon을 통해 회귀모델이 예측한 CI_HOUR을 csv로 저장하는 코드입니다.
-- make_use_bertTime_and_get_CI_HOURS.ipynb: train데이터셋에서 bert_time을 구하고 train의 기후열들과 똑같은 test데이터셋을 찾아 가능한 CI_HOUR의 값의 리스트를 각 값마다 저장하는 csv파일을 만드는 코드입니다.
-- make_final_auto06.ipynb: 위의 두 파일을 이용하여 기존 회귀모델이 예측한 값과 Bert_time을 이용해 구한 CI_HOUR 가능 리스트들을 적절히 비교하여 하나의 CI_HOUR로 선택하여 적용해서 최종 csv파일을 만들어주는 코드입니다.
+- 0. model_load_infer.ipynb : private score 복원을 위한 모델 로드와 predict과정 노트북 파일입니다. 1번파일의 결과값과 동일합니다.
+- 1. train_auto6.ipynb: autogluon을 통해 회귀모델이 예측한 CI_HOUR을 csv로 저장하는 코드입니다.
+- 2. make_use_bertTime_and_get_CI_HOURS.ipynb: train데이터셋에서 bert_time을 구하고 train의 기후열들과 똑같은 test데이터셋을 찾아 가능한 CI_HOUR의 값의 리스트를 각 값마다 저장하는 csv파일을 만드는 코드입니다.
+- 3. make_final_auto06.ipynb: 위의 두 파일을 이용하여 기존 회귀모델이 예측한 값과 Bert_time을 이용해 구한 CI_HOUR 가능 리스트들을 적절히 비교하여 하나의 CI_HOUR로 선택하여 적용해서 최종 csv파일을 만들어주는 코드입니다.
 
 ## 1. start training (train_auto06.ipynb)
 train_auto06.ipynb 파일을 실행시키면 autogluon 모델을 학습시키고 test파일에 대해 predict하여 회귀모델이 예측한 값을 auto06.csv파일로 저장합니다.
